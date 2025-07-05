@@ -1,0 +1,45 @@
+{
+	"name": "Json2_s3_to_adls_sink",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADLS_LINKED_SERVICE_s3_to_adls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@concat('landing','/',formatDateTime(utcnow(),'yyyy'),'/',formatDateTime(utcnow(),'MM'),'/',formatDateTime(utcnow(),'dd'))",
+					"type": "Expression"
+				},
+				"fileSystem": "input"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"VehicleID": {
+					"type": "string"
+				},
+				"latitiude": {
+					"type": "number"
+				},
+				"longitude": {
+					"type": "number"
+				},
+				"City": {
+					"type": "string"
+				},
+				"temeprature": {
+					"type": "integer"
+				},
+				"speed": {
+					"type": "integer"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

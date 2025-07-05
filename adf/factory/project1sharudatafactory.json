@@ -1,0 +1,9 @@
+{
+	"name": "project1sharudatafactory",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "aeac3b0b-8b4a-454b-9254-de0f3c47ef3c",
+		"tenantId": "72a7b66f-8f7b-4daf-9566-0c8d04c3b3f5"
+	}
+}

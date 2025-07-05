@@ -1,0 +1,25 @@
+{
+	"name": "trigger2",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pipeline2_adls_to_sql",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 1,
+				"startTime": "2025-07-05T20:25:00",
+				"endTime": "2025-07-07T20:25:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}

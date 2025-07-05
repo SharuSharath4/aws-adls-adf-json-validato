@@ -1,0 +1,46 @@
+{
+	"name": "AzureSqlTable1DTS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "VehicleID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "latitiude",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "longitude",
+				"type": "float",
+				"precision": 15
+			},
+			{
+				"name": "City",
+				"type": "nvarchar"
+			},
+			{
+				"name": "temeprature",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "speed",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "VehicleTrackingProject"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

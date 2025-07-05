@@ -1,0 +1,42 @@
+{
+	"name": "Json3_adls_to_sql",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADLS_LINKED_SERVICE_s3_to_adls",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "staging",
+				"fileSystem": "input"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"VehicleID": {
+					"type": "string"
+				},
+				"latitiude": {
+					"type": "number"
+				},
+				"longitude": {
+					"type": "number"
+				},
+				"City": {
+					"type": "string"
+				},
+				"temeprature": {
+					"type": "integer"
+				},
+				"speed": {
+					"type": "integer"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

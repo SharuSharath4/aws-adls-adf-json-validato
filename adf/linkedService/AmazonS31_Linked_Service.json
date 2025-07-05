@@ -1,0 +1,28 @@
+{
+	"name": "AmazonS31_Linked_Service",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AmazonS3",
+		"typeProperties": {
+			"serviceUrl": "https://s3.amazonaws.com",
+			"accessKeyId": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1LS",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "s3accesskeyid"
+			},
+			"secretAccessKey": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1LS",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "s3secretaccesskey"
+			},
+			"authenticationType": "AccessKey"
+		}
+	}
+}

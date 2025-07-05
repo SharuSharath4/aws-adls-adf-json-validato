@@ -1,0 +1,43 @@
+{
+	"name": "Json1_s3_to_adls",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AmazonS31_Linked_Service",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AmazonS3Location",
+				"bucketName": "project1datasharath",
+				"folderPath": "2025/07/04",
+				"fileName": "Customer_Valid_json.json"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"VehicleID": {
+					"type": "string"
+				},
+				"latitiude": {
+					"type": "number"
+				},
+				"longitude": {
+					"type": "number"
+				},
+				"City": {
+					"type": "string"
+				},
+				"temeprature": {
+					"type": "integer"
+				},
+				"speed": {
+					"type": "integer"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
